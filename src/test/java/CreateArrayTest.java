@@ -63,4 +63,19 @@ public class CreateArrayTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    //Test_4
+    //inputValue = String
+    // @Ignore
+    @Test
+    public void testCreateArrayFromText_HappyPath() {
+        //arrange
+        String inputString = "It was an apple pie";
+        String[] expectedResult = {"It", "was", "an", "apple", "pie"};
+
+        //act
+        String[] actualResult = new CreateArray().createArrayFromText(inputString);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 }

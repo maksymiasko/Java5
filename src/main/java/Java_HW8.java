@@ -26,12 +26,16 @@ public class Java_HW8 {
 //        int[] inputArray = {4, 3, 7, 12, 5, 2, 9, 4, 12};
 //        int n = 12;
 //        System.out.println(Arrays.toString(new SumOfTwo().sumOfTwo(inputArray,n)));
-        int a = 1;
-        int b = 2;
-        int c = 3;
-        int d = 4;
-        int f = 5;
-        System.out.println(Arrays.toString(new CreateArray().createIntArray(a, b, c, d, f)));
+//        int a = 1;
+//        int b = 2;
+//        int c = 3;
+//        int d = 4;
+//        int f = 5;
+//        System.out.println(Arrays.toString(new CreateArray().createIntArray(a, b, c, d, f)));
+
+//        Например, createArrayFromText(“It was an apple pie”) -> {“It”, “was”, “an”, “apple”, “pie”}
+        String inputString = "It was an apple pie";
+        System.out.println(Arrays.toString(new CreateArray().createArrayFromText(inputString)));
 
 
     }
