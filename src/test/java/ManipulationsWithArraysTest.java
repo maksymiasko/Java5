@@ -83,4 +83,55 @@ public class ManipulationsWithArraysTest {
         //assert
         Assert.assertEquals(actualResult, expectedResult);
     }
+
+    //Test_6
+    //inputValue = IntArrayGreaterThanNumber
+    // @Ignore
+    @Test
+    public void testValuesGreaterThanNumber_HappyPath() {
+        //arrange
+        int number = -13;
+        int[] inputArray = {4, -3, 7, -12, 5, -2, 9, 4, 12};
+        boolean expectedResult = true;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(inputArray, number);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    //Test_7
+    //inputValue = IntArrayLessThanNumber
+    // @Ignore
+    @Test
+    public void testValuesLessThanNumber_HappyPath() {
+        //arrange
+        int number = 13;
+        int[] inputArray = {4, -3, 7, -12, 5, -2, 9, 4, 12};
+        boolean expectedResult = false;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(inputArray, number);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    //Test_7
+    //inputValue = IntNumberInsideIntArray
+    // @Ignore
+    @Test
+    public void testIntNumberInsideIntArray_HappyPath() {
+        //arrange
+        int number = 0;
+        int[] inputArray = {4, -3, 7, -12, 5, -2, 9, 4, 12};
+        boolean expectedResult = false;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(inputArray, number);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 }
