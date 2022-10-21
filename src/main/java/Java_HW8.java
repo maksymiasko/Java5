@@ -12,7 +12,7 @@ public class Java_HW8 {
 //        System.out.println(Arrays.toString(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray))));
 //        System.out.println(Arrays.toString(new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)))));
 
-        //int[] inputArray = {4, -3, 7, -12, -5, 2, -9, -4, -12, 10};
+        int[] inputArray = {4, -3, 7, -12, -5, 2, -9, -4};
         //System.out.println(Arrays.toString(new Utils().bubbleSortArray(inputArray)));
 
         //int[] inputArray = {3, 2, 7, 5, 1, 9, 23, 1, 2};
@@ -34,8 +34,10 @@ public class Java_HW8 {
 //        System.out.println(Arrays.toString(new CreateArray().createIntArray(a, b, c, d, f)));
 
 //        Например, createArrayFromText(“It was an apple pie”) -> {“It”, “was”, “an”, “apple”, “pie”}
-        String inputString = "It was an apple pie";
-        System.out.println(Arrays.toString(new CreateArray().createArrayFromText(inputString)));
+//        String inputString = "It was an apple pie";
+//        System.out.println(Arrays.toString(new CreateArray().createArrayFromText(inputString)));
+
+        System.out.println(new OddEvenValuesInArray().countEvenValuesInArray(inputArray));
 
 
     }

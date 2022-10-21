@@ -56,4 +56,8 @@ public class ManipulationsWithArrays {
 
         return outputArray;
     }
+
+    //    В классе ManipulationsWithArrays написать метод areValuesGreaterThanNumber(),
+//    который принимает на вход массив целых чисел и число number.
+//    Метод возвращает значение true, если все элементы массива больше number, иначе возвращает false
 }
