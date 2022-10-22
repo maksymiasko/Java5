@@ -44,17 +44,17 @@ public class Utils {
 
     public int[] buildIntersectionsOfTwoArrays(int[] firstArray, int[] secondArray) {
         if (firstArray.length != 0 && secondArray.length != 0) {
-            int outputArrayLength = 0;
+            int outLength = 0;
             int[] tmpArray = new int[firstArray.length + secondArray.length];
             for (int i : firstArray)
                 for (int j : secondArray) {
                     if (j == i) {
-                        tmpArray[outputArrayLength] = j;
-                        outputArrayLength++;
+                        tmpArray[outLength] = j;
+                        outLength++;
                     }
                 }
-            int[] outputArray = new int[outputArrayLength];
-            for (int i = 0; i < outputArrayLength; i++) {
+            int[] outputArray = new int[outLength];
+            for (int i = 0; i < outLength; i++) {
                 outputArray[i] = tmpArray[i];
             }
 

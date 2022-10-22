@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class MinMaxAve {
 
     public int[] minMaxAve(int[] inputArray, int minIndex, int maxIndex) {
-        if (0 <= minIndex && maxIndex < inputArray.length) {
+        if (minIndex >= 0 && maxIndex < inputArray.length) {
             if (0 == new AreNumbersEqual().areNumbersEqual(minIndex, maxIndex)) {
 
                 return new int[]{inputArray[minIndex], inputArray[maxIndex], inputArray[minIndex]};

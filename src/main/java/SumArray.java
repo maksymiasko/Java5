@@ -1,7 +1,5 @@
 //Написать алгоритм SumArray, который возвращает сумму всех чисел массива
 
-import java.sql.Array;
-
 public class SumArray {
 
     public int sumArray(int[] inputIntArray) {

@@ -82,7 +82,7 @@ public class MinMaxAveTest {
     @Test
     public void testMinMaxAveOutOfBoundsMaxIndex() {
         //arrange
-        int minIndex = 0;
+        int minIndex = 1;
         int maxIndex = 15;
         int[] inputArray = {1, 2, 3, 4, 5, 6, 7, 8};
         int[] expectedResult = {};

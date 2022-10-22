@@ -2,15 +2,17 @@ import java.util.Arrays;
 
 public class Java_HW8 {
     public static void main(String[] args) {
-        System.out.println("Hi Maven");
 
-//        int[] firstArray = {100, 2, 3, 4, 5, 6, 7, 8, 45};
-//        int[] secondArray = {100, 200, 45, 3, 7, 5, 3, 7, 5, 9};
+
+        int[] firstArray = {100, 2, -1, 4, 5, 6, 7, 8, 45};
+        int[] secondArray = {100, 200, 45, 3, -1, 5, 3, 7, 5, 9};
 //
 //
-//        System.out.println(Arrays.toString(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
-//        System.out.println(Arrays.toString(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray))));
-//        System.out.println(Arrays.toString(new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)))));
+        System.out.println(Arrays.toString(firstArray));
+        System.out.println(Arrays.toString(secondArray));
+        System.out.println(Arrays.toString(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
+        System.out.println(Arrays.toString(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray))));
+        System.out.println(Arrays.toString(new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)))));
 
 //        int[] inputArray = {4, -3, 7, -12, -5, 2, -9, -4};
 //        System.out.println(Arrays.toString(new Utils().bubbleSortArray(inputArray)));
@@ -38,10 +40,9 @@ public class Java_HW8 {
 //        System.out.println(Arrays.toString(new CreateArray().createArrayFromText(inputString)));
 
 //        System.out.println(new OddEvenValuesInArray().countEvenValuesInArray(inputArray));
-        int[] inputArray = {4, -3, 7, -12, 5, -2, 9, 4, 12};
-        int number = -13;
-        System.out.println(new ManipulationsWithArrays().areValuesGreaterThanNumber(inputArray, number));
+//        int[] inputArray = {4, -3, 7, -12, 5, -2, 9, 4, 12};
+//        int number = -13;
+//        System.out.println(new ManipulationsWithArrays().areValuesGreaterThanNumber(inputArray, number));
     }
-
 }
 
