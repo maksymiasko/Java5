@@ -3,7 +3,6 @@ public class Utils {
     public int[] bubbleSortArray(int[] inputArray) {
         if (inputArray.length != 0) {
             boolean sorted = false;
-            //int tmp;
             while (!sorted) {
                 sorted = true;
                 for (int i = 0; i < inputArray.length - 1; i++) {
@@ -21,7 +20,7 @@ public class Utils {
         return inputArray;
     }
 
-    public int[] removeDuplicatesFromArray(int[] inputArray) {
+    public int[] removeDuplicatesFromSortedArray(int[] inputArray) {
         if (inputArray.length != 0) {
             int outlength = 1;
             for (int i = 1; i < inputArray.length; i++) {
@@ -30,35 +29,33 @@ public class Utils {
                     outlength++;
                 }
             }
-            int[] outputArray = new int[outlength];
-            for (int i = 0; i < outlength; i++) {
-                outputArray[i] = inputArray[i];
-            }
 
-            return outputArray;
+            return outputArray(inputArray,outlength);
         }
 
         return inputArray;
     }
 
     public int[] buildIntersectionsOfTwoArrays(int[] firstArray, int[] secondArray) {
-        if (firstArray.length != 0 && secondArray.length != 0) {
-            int outlength = 0;
-            int[] tmpArray = new int[firstArray.length + secondArray.length];
-            for (int i : firstArray)
-                for (int j : secondArray) {
-                    if (j == i) {
-                        tmpArray[outlength] = j;
-                        outlength++;
-                    }
+        int outlength = 0;
+        int[] outputArray = new int[firstArray.length + secondArray.length];
+        for (int i : firstArray)
+            for (int j : secondArray) {
+                if (j == i) {
+                    outputArray[outlength] = j;
+                    outlength++;
                 }
-            int[] outputArray = new int[outlength];
-            for (int i = 0; i < outlength; i++) {
-                outputArray[i] = tmpArray[i];
             }
 
-            return outputArray;
+        return outputArray(outputArray,outlength);
+    }
+
+    public int[] outputArray(int[] inputArray, int outlength) {
+        int[] outputArray = new int[outlength];
+        for (int i = 0; i < outlength; i++) {
+            outputArray[i] = inputArray[i];
         }
-        return new int[0];
+
+        return outputArray;
     }
 }

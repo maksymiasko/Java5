@@ -65,7 +65,8 @@ public class IntersectionTest {
         int[] expectedResult = {};
 
         //act
-        int[] actualResult = new Intersection().intersection(firstArray, secondArray);;
+        int[] actualResult = new Intersection().intersection(firstArray, secondArray);
+        ;
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);

@@ -85,7 +85,7 @@ public class MinMaxAveTest {
         int minIndex = 1;
         int maxIndex = 15;
         int[] inputArray = {1, 2, 3, 4, 5, 6, 7, 8};
-        int[] expectedResult = {};
+        int[] expectedResult = {0, 1, 15};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
@@ -103,7 +103,7 @@ public class MinMaxAveTest {
         int minIndex = -2;
         int maxIndex = 8;
         int[] inputArray = {1, 2, 3, 4, 5, 6, 7, 8};
-        int[] expectedResult = {};
+        int[] expectedResult = {0, -2, 8};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
@@ -118,10 +118,10 @@ public class MinMaxAveTest {
     @Test
     public void testMinMaxAveMinIndexCloseToMaxIndex() {
         //arrange
-        int minIndex = 7;
-        int maxIndex = 8;
+        int minIndex = 6;
+        int maxIndex = 7;
         int[] inputArray = {1, 2, 3, 4, 5, 6, 6, 8};
-        int[] expectedResult = {};
+        int[] expectedResult = {6, 8, 7};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
@@ -131,15 +131,15 @@ public class MinMaxAveTest {
     }
 
     //Test_8
-    //AnEmptyInputArray
+    //minIndex+1 = maxIndex; IndexesToCloseUpend
     //@Ignore
     @Test
-    public void testMinMaxAveMinEmptyInputArray() {
+    public void testMinMaxAveMinIndexCloseToMaxIndexUpend() {
         //arrange
-        int minIndex = 6;
-        int maxIndex = 8;
-        int[] inputArray = {};
-        int[] expectedResult = {};
+        int minIndex = 1;
+        int maxIndex = 0;
+        int[] inputArray = {1, 3, 3, 4, 5, 6, 6, 8};
+        int[] expectedResult = {3, 1, 2};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
@@ -149,6 +149,24 @@ public class MinMaxAveTest {
     }
 
     //Test_9
+    //AnEmptyInputArray
+    //@Ignore
+    @Test
+    public void testMinMaxAveMinEmptyInputArray() {
+        //arrange
+        int minIndex = 6;
+        int maxIndex = 8;
+        int[] inputArray = null;
+        int[] expectedResult = {-1, 6, 8};
+
+        //act
+        int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
+
+        //assert
+        Assert.assertEquals(actualResult,expectedResult);
+    }
+
+    //Test_10
     //ToShortInputArray
     //@Ignore
     @Test
@@ -157,7 +175,7 @@ public class MinMaxAveTest {
         int minIndex = 6;
         int maxIndex = 8;
         int[] inputArray = {2};
-        int[] expectedResult = {};
+        int[] expectedResult = {0, 6, 8};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);

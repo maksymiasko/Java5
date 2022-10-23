@@ -6,42 +6,56 @@ import java.util.Arrays;
 public class MinMaxAve {
 
     public int[] minMaxAve(int[] inputArray, int minIndex, int maxIndex) {
-        if (minIndex >= 0 && maxIndex < inputArray.length) {
-            if (0 == new AreNumbersEqual().areNumbersEqual(minIndex, maxIndex)) {
+        if (inputArray == null) {
 
-                return new int[]{inputArray[minIndex], inputArray[maxIndex], inputArray[minIndex]};
-            }
-            if (-1 == new AreNumbersEqual().areNumbersEqual(minIndex, maxIndex)) {
+            return new int[]{-1, minIndex, maxIndex};
+        } else if (minIndex < 0 || maxIndex > inputArray.length) { // out of bound
 
-                return minMaxAveOfSubArray(inputArray, minIndex, maxIndex);
-            }
-            if (1 == new AreNumbersEqual().areNumbersEqual(minIndex, maxIndex)) {
+            return new int[]{0, minIndex, maxIndex};
+        }
+        if (inputArray.length == 1) {
 
-                return minMaxAveOfSubArray(inputArray, maxIndex, minIndex);
-            }
-
-            return new int[]{};
+            return new int[]{1, minIndex, maxIndex};
         }
 
-        return new int[]{};
+        if (minIndex == maxIndex) {
+
+            return new int[]{inputArray[minIndex], inputArray[minIndex], inputArray[minIndex]};
+        }
+        if (minIndex < maxIndex) {
+            if (Math.abs(maxIndex - minIndex) == 1) { // indexes too close
+
+                return new int[]{inputArray[minIndex], inputArray[maxIndex], (inputArray[minIndex] + inputArray[maxIndex]) / 2};
+            }
+
+            return minMaxAveOfSubArray(inputArray, minIndex, maxIndex);
+        } else {// (minIndex > maxIndex)
+            if (Math.abs(maxIndex - minIndex) == 1) {
+
+                return new int[]{inputArray[minIndex], inputArray[maxIndex], (inputArray[minIndex] + inputArray[maxIndex]) / 2};
+            }
+
+            return minMaxAveOfSubArray(inputArray, maxIndex, minIndex);
+        }
     }
 
+
     public int[] minMaxAveOfSubArray(int[] inputArray, int minIndex, int maxIndex) {
-        int tmpArrayMaxValue = Integer.MIN_VALUE;
-        int tmpArrayMinValue = Integer.MAX_VALUE;
-        int countValueOfTmpArray = 0;
-        int[] tmpArray = new int[maxIndex - minIndex + 1];
+        int maxArrayValue = Integer.MIN_VALUE;
+        int minArrayValue = Integer.MAX_VALUE;
+        int sumArrayValue = 0;
+        int[] outArray = new int[maxIndex - minIndex + 1];
         for (int i = minIndex, j = 0; i <= maxIndex; i++, j++) {
-            tmpArray[j] = inputArray[i];
-            if (tmpArrayMaxValue < tmpArray[j]) {
-                tmpArrayMaxValue = tmpArray[j];
+            outArray[j] = inputArray[i];
+            if (maxArrayValue < outArray[j]) {
+                maxArrayValue = outArray[j];
             }
-            if (tmpArrayMinValue > tmpArray[j]) {
-                tmpArrayMinValue = tmpArray[j];
+            if (minArrayValue > outArray[j]) {
+                minArrayValue = outArray[j];
             }
-            countValueOfTmpArray = countValueOfTmpArray + tmpArray[j];
+            sumArrayValue = sumArrayValue + outArray[j];
         }
 
-      return new int[]{tmpArrayMinValue, tmpArrayMaxValue, countValueOfTmpArray / tmpArray.length};
+        return new int[]{minArrayValue, maxArrayValue, sumArrayValue / outArray.length};
     }
 }

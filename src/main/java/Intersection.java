@@ -4,7 +4,7 @@ public class Intersection {
 
     public int[]intersection(int[] firstArray,int[] secondArray) {
 
-        return  new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray
+        return  new Utils().removeDuplicatesFromSortedArray(new Utils().bubbleSortArray
                 (new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
     }
 }
