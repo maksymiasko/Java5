@@ -1,7 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class IsMultipleIntegerTest {
+public class IsMultipleInteger7911Test {
 
     //Test_1
     //inputIntM = 63 is divided by 7 and 9
@@ -13,7 +13,7 @@ public class IsMultipleIntegerTest {
         String expectedResult = "Good Number";
 
         //act
-        String actualResult = new IsMultipleInteger().isMultipleInteger(inputIntM);
+        String actualResult = new IsMultipleInteger7911().ismultipleinteger7911(inputIntM);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -29,7 +29,7 @@ public class IsMultipleIntegerTest {
         String expectedResult = "Bad Number";
 
         //act
-        String actualResult = new IsMultipleInteger().isMultipleInteger(inputIntM);
+        String actualResult = new IsMultipleInteger7911().ismultipleinteger7911(inputIntM);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -45,7 +45,7 @@ public class IsMultipleIntegerTest {
         String expectedResult = "Poor Number";
 
         //act
-        String actualResult = new IsMultipleInteger().isMultipleInteger(inputIntM);
+        String actualResult = new IsMultipleInteger7911().ismultipleinteger7911(inputIntM);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -61,7 +61,7 @@ public class IsMultipleIntegerTest {
         String expectedResult = "-1";
 
         //act
-        String actualResult = new IsMultipleInteger().isMultipleInteger(inputIntM);
+        String actualResult = new IsMultipleInteger7911().ismultipleinteger7911(inputIntM);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);

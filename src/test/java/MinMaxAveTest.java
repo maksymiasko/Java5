@@ -48,7 +48,7 @@ public class MinMaxAveTest {
         //arrange
         int minIndex = 5;
         int maxIndex = 2;
-        int[] inputArray = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] inputArray = {8, 2, 3, 4, 5, 6, 7, 1};
         int[] expectedResult = {3, 6, 4};
 
         //act

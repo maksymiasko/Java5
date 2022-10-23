@@ -4,9 +4,9 @@
 //        If M is only multiple of 11 then return "Poor Number"
 //        If M doesn't satisfy any of the above conditions then return "-1
 
-public class IsMultipleInteger {
+public class IsMultipleInteger7911 {
 
-    public String isMultipleInteger(int inputIntM) {
+    public String ismultipleinteger7911(int inputIntM) {
         if (inputIntM % 7 == 0 && inputIntM % 9 == 0) {
 
             return "Good Number";

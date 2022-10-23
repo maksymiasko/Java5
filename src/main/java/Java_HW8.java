@@ -5,7 +5,7 @@ public class Java_HW8 {
 
 
         int[] firstArray = {100, 2, -1, 4, 5, 6, 7, 8, 45};
-        int[] secondArray = {100, 200, 45, 3, -1, 5, 3, 7, 5, 9};
+        int[] secondArray = {100, 200, 45, 3, -1, 5, 3, 7, 5, 45};
 //
 //
         System.out.println(Arrays.toString(firstArray));

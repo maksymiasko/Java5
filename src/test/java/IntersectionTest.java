@@ -9,13 +9,12 @@ public class IntersectionTest {
     @Test
     public void testIntersectionPositiveValue_HappyPath() {
         //arrange
-        int[] firstArray = {1, 2, 4, 5, 89};
+        int[] firstArray = {1, 2, 4, 5, 89, 2};
         int[] secondArray = {8, 9, 4, 2};
         int[] expectedResult = {2, 4};
 
         //act
-        int[] actualResult = new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray
-                (new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
+        int[] actualResult = new Intersection().intersection(firstArray, secondArray);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -32,8 +31,7 @@ public class IntersectionTest {
         int[] expectedResult = {8, 9};
 
         //act
-        int[] actualResult = new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray
-                (new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
+        int[] actualResult = new Intersection().intersection(firstArray, secondArray);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -50,8 +48,7 @@ public class IntersectionTest {
         int[] expectedResult = {};
 
         //act
-        int[] actualResult = new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray
-                (new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
+        int[] actualResult = new Intersection().intersection(firstArray, secondArray);
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);
@@ -68,8 +65,7 @@ public class IntersectionTest {
         int[] expectedResult = {};
 
         //act
-        int[] actualResult = new Utils().removeDuplicatesFromArray(new Utils().bubbleSortArray
-                (new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
+        int[] actualResult = new Intersection().intersection(firstArray, secondArray);;
 
         //assert
         Assert.assertEquals(actualResult, expectedResult);

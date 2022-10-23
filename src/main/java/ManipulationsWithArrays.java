@@ -65,14 +65,10 @@ public class ManipulationsWithArrays {
         for (int i = 0; i < inputArray.length; i++) {
             if (inputArray[i] > number) {
                 count++;
-            } else {
-                count--;
             }
         }
-        if (count == inputArray.length) {
-            return true;
-        } else {
-            return false;
-        }
+
+        return count == inputArray.length;
     }
 }
+
