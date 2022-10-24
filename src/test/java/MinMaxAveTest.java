@@ -120,8 +120,8 @@ public class MinMaxAveTest {
         //arrange
         int minIndex = 6;
         int maxIndex = 7;
-        int[] inputArray = {1, 2, 3, 4, 5, 6, 6, 8};
-        int[] expectedResult = {6, 8, 7};
+        int[] inputArray = {1, 2, 3, 4, 5, 6, 8, 10};
+        int[] expectedResult = {8, 10, 9};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);
@@ -139,7 +139,7 @@ public class MinMaxAveTest {
         int minIndex = 1;
         int maxIndex = 0;
         int[] inputArray = {1, 3, 3, 4, 5, 6, 6, 8};
-        int[] expectedResult = {3, 1, 2};
+        int[] expectedResult = {1, 3, 2};
 
         //act
         int[] actualResult = new MinMaxAve().minMaxAve(inputArray, minIndex, maxIndex);

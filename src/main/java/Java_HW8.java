@@ -11,6 +11,8 @@ public class Java_HW8 {
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(secondArray));
 
+        System.out.println(Arrays.toString(new MinMaxAve().minMaxAve(firstArray, 0, 10)));
+
         System.out.println();
         System.out.println(Arrays.toString(new Utils().buildIntersectionsOfTwoArrays(firstArray, secondArray)));
         System.out.println();
