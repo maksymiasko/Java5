@@ -30,7 +30,7 @@ public class Utils {
                 }
             }
 
-            return outputArray(inputArray,outlength);
+            return outputArray(inputArray, outlength);
         }
 
         return inputArray;
@@ -47,7 +47,7 @@ public class Utils {
                 }
             }
 
-        return outputArray(outputArray,outlength);
+        return outputArray(outputArray, outlength);
     }
 
     public int[] outputArray(int[] inputArray, int outlength) {
@@ -57,5 +57,48 @@ public class Utils {
         }
 
         return outputArray;
+    }
+
+    // метод из Utils для чужой SumOfTwo
+    public static boolean isExistInArr(int[] arr, int a) {
+        if (arr == null || arr.length == 0) {
+            return false;
+        }
+        for (int i : arr) {
+            if (i == a) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // формируем массив искомых пар
+    public int[][] SummOfTwo(int[] inputArray, int n) {
+        int length = new Utils().lengthOutputArray(inputArray, n);
+        int[][] outputArray = new int[length][2];
+        for (int i = 0,k = 0; i < inputArray.length - 1; i++) {
+            for (int j = i + 1; j < inputArray.length; j++) {
+                if (inputArray[i] + inputArray[j] == n && inputArray[i] !=n && inputArray[j] != n) {
+                    outputArray[k][0] = inputArray[i];
+                    outputArray[k][1] = inputArray[j];
+                    k++;
+
+                }
+            }
+        }
+        return outputArray;
+    }
+    // находим длину массива вывода = количество искомых пар
+    public int lengthOutputArray(int[] inputArray, int n) {
+        int length = 0;
+        for (int i = 0; i < inputArray.length - 1; i++) {
+            for (int j = i + 1; j < inputArray.length; j++) {
+                if (inputArray[i] + inputArray[j] == n && inputArray[i] != n && inputArray[j] != n) {
+                    length++;
+
+                }
+            }
+        }
+        return length;
     }
 }

@@ -22,14 +22,14 @@ public class MinMaxAve {
 
             return new int[]{inputArray[minIndex], inputArray[minIndex], inputArray[minIndex]};
         }
-        if (minIndex < maxIndex) {
+        if (minIndex < maxIndex) {              // (minIndex < maxIndex)
             if (Math.abs(maxIndex - minIndex) == 1) { // indexes too close
 
                 return new int[]{inputArray[minIndex], inputArray[maxIndex], (inputArray[minIndex] + inputArray[maxIndex]) / 2};
             }
 
             return minMaxAveOfSubArray(inputArray, minIndex, maxIndex);
-        } else if (Math.abs(maxIndex - minIndex) == 1) {                               // (minIndex > maxIndex)
+        } else if (Math.abs(maxIndex - minIndex) == 1) {   // (minIndex > maxIndex)
 
 
                 return new int[]{inputArray[maxIndex], inputArray[minIndex], (inputArray[minIndex] + inputArray[maxIndex]) / 2};
