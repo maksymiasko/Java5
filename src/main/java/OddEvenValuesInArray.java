@@ -6,14 +6,14 @@ public class OddEvenValuesInArray {
 //    и возвращает количество четных чисел в этом массиве
     public int countEvenValuesInArray(int[] inputArray) {
         if (inputArray.length != 0) {
-            int count = 0;
+            int countEven = 0;
             for (int i = 0; i < inputArray.length; i++) {
                 if (inputArray[i] % 2 == 0) {
-                    count++;
+                    countEven++;
                 }
             }
 
-            return count;
+            return countEven;
         }
 
         return -1;
@@ -23,14 +23,14 @@ public class OddEvenValuesInArray {
 //    и возвращает количество нечетных чисел в этом массиве
     public int countOddValuesInArray(int[] inputArray) {
         if (inputArray.length != 0) {
-            int count = 0;
+            int countOdd = 0;
             for (int i = 0; i < inputArray.length; i++) {
                 if (inputArray[i] % 2 != 0) {
-                    count++;
+                    countOdd++;
                 }
             }
 
-            return count;
+            return countOdd;
         }
 
         return -1;
