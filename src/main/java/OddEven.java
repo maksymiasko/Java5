@@ -5,4 +5,8 @@ public class OddEven {
     public static String oddEven(int inputInt) {
         return inputInt % 2 != 0 ? "Odd": "Even";
     }
+    public  static  boolean oddEvenBol(int inputInt) { // return true if even
+        return (inputInt % 2 != 0);
+    }
 }
+

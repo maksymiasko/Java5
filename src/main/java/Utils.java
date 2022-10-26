@@ -82,7 +82,6 @@ public class Utils {
                     outputArray[k][0] = inputArray[i];
                     outputArray[k][1] = inputArray[j];
                     k++;
-
                 }
             }
         }
@@ -95,7 +94,6 @@ public class Utils {
             for (int j = i + 1; j < inputArray.length; j++) {
                 if (inputArray[i] + inputArray[j] == n && inputArray[i] != n && inputArray[j] != n) {
                     length++;
-
                 }
             }
         }
