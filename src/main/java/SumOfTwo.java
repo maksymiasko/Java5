@@ -28,7 +28,7 @@ public class SumOfTwo {
         fountNumbers = new int[arr.length]; // обнуляем временный массив найденных
         fountNumbersIndex = 0; // обнуляем индекс временного массива для записи нового числа
 
-        int[][] resultArr = new int[objArrLength][2]; // создаём итоговый массив найденной длины // можно Qbject[] resultArr = new int[objArrLength];
+        int[][] resultArr = new int[objArrLength][]; // создаём итоговый массив найденной длины // можно Qbject[] resultArr = new int[objArrLength];
         int resultArrIndex = 0; // индекс итогового массива для записи
 
         for (int i = 0; i < arr.length; i++) { //повторяем прошлый цикл
